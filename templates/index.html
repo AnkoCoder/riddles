@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div>
+    <h2>Выбери загадку, которую хочешь угадать</h2>
+    </div>
+    {% for riddle in riddles %}
+        <a href="/riddle/{{ riddle.id }}"><p class="card-text">{{ riddle.question }}</p></a>
+    {% endfor %}
+{% endblock %}

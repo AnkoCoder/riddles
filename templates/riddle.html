@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+    <h2>Напиши ответ загадки</h2>
+</div>
+<p>{{ riddle.question }}</p>
+<form method="POST">
+    <div class="row">
+    
+        <div class="col-lg-10">
+            <input name="answer" type="text" class="form-control" placeholder="Ответ"/>
+        </div>
+        <div class="col-lg-2">
+            <input type="submit" class="btn btn-md btn-primary" value="Угадать!"/>
+        </div>
+    </div>
+</form>
+<div class="row">
+    <p>{{ msg }}</p>
+</div>
+{% endblock %}
